@@ -5,6 +5,6 @@ service-hotfolder=5.0.0=feature/installOW
 service-receipt=5.0.0=feature/installOW
 service-statistics=5.0.0=feature/installOW
 service-telemetry=5.0.0=feature/installOW
-service-ui-2=5.0.0=feature/installOW
+service-ui=5.0.0=feature/installOW
 configurator=5.0.0=feature/installOW
 service-super-io=5.0.0=feature/installOW
