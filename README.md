@@ -1,1 +1,11 @@
-# onewash
+kis-configuration=2.2.26-ow3-photomaton-2=onewash
+kis-revolution=2.1.6=master
+service-hardware=2.0.18-F2=feature/installOW
+service-payment=2.4.2-F2=feature/installOW
+service-hotfolder=1.0.24-F2=feature/installOW
+service-receipt=1.2.2-F2=feature/installOW
+service-statistics=1.2.2-F2=feature/installOW
+service-telemetry=1.8.5-F2=feature/installOW
+service-ui-2=3.5.15-F2=feature/installOW
+configurator=2.4.10-F1=feature/installOW
+service-super-io=1.0.2-F2=feature/installOW
