@@ -1,5 +1,5 @@
 kis-configuration=5.0.0-rc6-photomaton=onewash
-service-hardware=5.0.0-rc6=feature/installOW
+service-hardware=5.0.0-rc7=feature/installOW
 service-payment=5.0.0-rc6=feature/installOW
 service-hotfolder=5.0.0-rc6=feature/installOW
 service-receipt=5.0.0-rc6=feature/installOW
