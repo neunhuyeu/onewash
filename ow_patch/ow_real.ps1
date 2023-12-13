@@ -89,7 +89,15 @@ function patch_configuration()
 	
 	$json = Get-Content $file_source | Out-String | ConvertFrom-Json
 
-	$json.Devices | % {if($_.Type -eq 'Free'){$_.Active = $false}}
+	$json.Devices | % {
+		if($_.Type -eq 'Free'){
+			$_.Active = $false
+		} elseif($_.Type -eq 'Coin'){
+			$_.Active = $true
+		} else {
+			$_.Active = $false
+		}
+	}
 
 	$json | ConvertTo-Json -depth 32 | Format-Json | set-content $file_destination
 
