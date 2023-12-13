@@ -89,6 +89,7 @@ function patch_configuration()
 	
 	$json = Get-Content $file_source | Out-String | ConvertFrom-Json
 
+	# SET DEVICES
 	$json.Devices | % {
 		if($_.Type -eq 'Free'){
 			$_.Active = $false
@@ -99,12 +100,58 @@ function patch_configuration()
 		}
 	}
 
+	# SET DisablePrinter
+	$json.DisablePrinter = $false
+
 	$json | ConvertTo-Json -depth 32 | Format-Json | set-content $file_destination
 
 	echo " => Finish patch_configuration"
+}
+
+function patch_staticConfiguration()
+{	
+	echo " => Run patch_staticConfiguration ..."
+
+	$root_path = get_root_path
+	$file_source = "$root_path\static\configuration\services\receipt\staticConfiguration.json"
+	$file_destination  = "$root_path\static\configuration\services\receipt\staticConfiguration.json"
+	
+	$json = Get-Content $file_source | Out-String | ConvertFrom-Json
+
+	$json.DisabledPlugins = $json.DisabledPlugins |
+		Where-Object {
+			$_ -ne 'Printer'
+		}
+		
+	if ($json.DisabledPlugins -eq $null) {
+		$json.DisabledPlugins = @()
+	}
+
+	$json | ConvertTo-Json -depth 32 | Format-Json | set-content $file_destination
+
+	echo " => Finish patch_staticConfiguration"
+}
+
+function patch_UiConfiguration()
+{	
+	echo " => Run patch_UiConfiguration ..."
+
+	$root_path = get_root_path
+	$file_source = "$root_path\app\services\ui\Configuration\UiConfiguration\UiConfiguration.json"
+	$file_destination  = "$root_path\app\services\ui\Configuration\UiConfiguration\UiConfiguration.json"
+	
+	$json = Get-Content $file_source | Out-String | ConvertFrom-Json
+
+	$json.UiConfiguration.DisplayPrintTicket = $true
+
+	$json | ConvertTo-Json -depth 32 | Format-Json | set-content $file_destination
+
+	echo " => Finish patch_UiConfiguration"
 }
 
 patch_IOBoardManagerConf
 patch_AutoDiscoveryOptions
 patch_appsettings
 patch_configuration
+patch_staticConfiguration
+patch_UiConfiguration
