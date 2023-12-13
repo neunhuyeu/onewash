@@ -1,0 +1,1 @@
+powershell.exe -ExecutionPolicy Bypass -Command "& './ow_patch.ps1'"
