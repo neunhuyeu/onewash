@@ -17,7 +17,7 @@ function Format-Json([Parameter(Mandatory, ValueFromPipeline)][String] $json) {
 
 function get_root_path()
 {
-	$root_path = (Get-ChildItem -Path Env:KIS_ROOT_TEST).Value
+	$root_path = (Get-ChildItem -Path Env:KIS_ROOT).Value
 	$root_path = $root_path.Substring(0, $root_path.length - 1)
 	
 	return $root_path
