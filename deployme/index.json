@@ -6,39 +6,39 @@
       "url": "https://nexus.dev.photo-me.eu/repository/onewash-dev-repository/",
       "packages": [
         {
-          "package": "service-hardware",
+          "name": "service-hardware",
           "version": "5.0.0-rc11"
         },
         {
-          "package": "service-hotfolder",
+          "name": "service-hotfolder",
           "version": "5.0.0-rc9"
         },
         {
-          "package": "service-receipt",
+          "name": "service-receipt",
           "version": "5.0.0-rc11"
         },
         {
-          "package": "service-super-io",
+          "name": "service-super-io",
           "version": "5.0.0-rc31"
         },
         {
-          "package": "service-payment",
+          "name": "service-payment",
           "version": "5.0.0-rc35"
         },
         {
-          "package": "service-statistics",
+          "name": "service-statistics",
           "version": "5.0.0-rc8"
         },
         {
-          "package": "service-telemetry",
+          "name": "service-telemetry",
           "version": "5.0.0-rc10"
         },
         {
-          "package": "service-ui",
+          "name": "service-ui",
           "version": "5.0.0-rc11"
         },
         {
-          "package": "configurator",
+          "name": "configurator",
           "version": "5.0.0-rc8"
         }
       ]
@@ -49,7 +49,7 @@
       "url": "https://nexus.dev.photo-me.eu/repository/onewash-dev-repository/",
       "packages": [
         {
-          "package": "kis-configuration",
+          "name": "kis-configuration",
           "version": "5.0.0-rc8"
         }
       ]
