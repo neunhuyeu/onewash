@@ -31,7 +31,7 @@
         },
         {
           "name": "service-telemetry",
-          "version": "5.0.0-rc10"
+          "version": "5.0.0-rc11"
         },
         {
           "name": "service-ui",
