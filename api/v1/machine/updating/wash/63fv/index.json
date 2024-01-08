@@ -1,0 +1,68 @@
+{
+  "name": "Distribution of software package for updating machine",
+  "repositories": [
+    {
+      "name": "software",
+      "url": "https://nexus.dev.photo-me.eu/repository/onewash-dev-repository/",
+      "packages": [
+        {
+          "name": "service-hardware",
+          "version": "5.0.0-rc11"
+        },
+        {
+          "name": "service-hotfolder",
+          "version": "5.0.0-rc9"
+        },
+        {
+          "name": "service-receipt",
+          "version": "5.0.0-rc11"
+        },
+        {
+          "name": "service-super-io",
+          "version": "5.0.0-rc31"
+        },
+        {
+          "name": "service-payment",
+          "version": "5.0.0-rc35"
+        },
+        {
+          "name": "service-statistics",
+          "version": "5.0.0-rc8"
+        },
+        {
+          "name": "service-telemetry",
+          "version": "5.0.0-rc11"
+        },
+        {
+          "name": "service-ui",
+          "version": "5.0.0-rc11"
+        },
+        {
+          "name": "configurator",
+          "version": "5.0.0-rc11"
+        }
+      ]
+    },
+
+    {
+      "name": "operator-configuration",
+      "url": "https://nexus.dev.photo-me.eu/repository/onewash-dev-repository/",
+      "packages": [
+        {
+          "name": "kis-configuration",
+          "version": "5.0.0-rc8-photom"
+        }
+      ]
+    }
+  ],
+  "bundles": [
+    {
+      "bundleId": 786,
+      "name": "nextgenbooth_soft_07122023_3.8.5_DEV"
+    },
+    {
+      "bundleId": 798,
+      "name": "nextgenbooth_config_starbooth821_12122023_3.8.6_DEV"
+    }
+  ]
+}
